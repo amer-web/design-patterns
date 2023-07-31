@@ -59,9 +59,21 @@ require_once __DIR__ . "/../vendor/autoload.php";
 //$request  = new stdClass;
 //$request->name = "amer";
 //$request->age = 30;
-
 //$response = $middlewareChain->handle($request, function ($request) {
 //    return 'amer';
 //});
 //var_dump($response);
+//********************** template method *******************
+//$beachJourney = new \App\Behavioral\TemplateMethod\BeachJourney();
+//$beachJourney->takeATrip();
+//var_dump($beachJourney->getThingsToDo());
+//******************** Fluent interface ******************
+//$query = new \App\Structural\FluentInterface\QueryBuilder();
+//var_dump($query->table('users')->select('name','id')
+//    ->where('age', '>', 18)
+//    ->where('country', '=', 'USA')
+//    ->getQuery()
+//);
+//********************
+
 
