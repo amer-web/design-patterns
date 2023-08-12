@@ -74,6 +74,24 @@ require_once __DIR__ . "/../vendor/autoload.php";
 //    ->where('country', '=', 'USA')
 //    ->getQuery()
 //);
-//********************
-
-
+//******************** Strategy Pattern ******************
+//$md5 = new \App\Behavioral\Strategy\Md5Encrypt();
+//$hash = new \App\Behavioral\Strategy\HashEncrypt();
+//$encrypt = new \App\Behavioral\Strategy\EncryptContext($md5);
+//var_dump($encrypt->encryptString('amer'));
+//$encrypt->setEncryptStrategy($hash);
+//var_dump($encrypt->encryptString('amer'));
+//************** Facade Pattern **************
+//$onlineShopping = new \App\Structural\Facade\OnlineShoppingFacade();
+//$result = $onlineShopping->buyProduct('Smartphone', 500);
+//if ($result) {
+//    echo "Purchase successful!";
+//} else {
+//    echo "Product out of stock.";
+//}
+//******************** Adapter Pattern ****************
+//$email  = new \App\Structural\Adapter\EmailNotification();
+//$twitter  = new \App\Structural\Adapter\TwitterAdapter();
+//$send = new \App\Structural\Adapter\NotificationManager($twitter);
+//var_dump($send->sendNotification('01112795101'));
+//*******************
