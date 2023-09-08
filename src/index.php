@@ -94,4 +94,64 @@ require_once __DIR__ . "/../vendor/autoload.php";
 //$twitter  = new \App\Structural\Adapter\TwitterAdapter();
 //$send = new \App\Structural\Adapter\NotificationManager($twitter);
 //var_dump($send->sendNotification('01112795101'));
-//*******************
+//******************* mediator *******************
+//$bookingSystem = new \App\Behavioral\Mediator\FlightBookingSystem();
+//$airline1 = new \App\Behavioral\Mediator\Airline("Airline A", ["FLIGHT101", "FLIGHT102"]);
+//$airline2 = new \App\Behavioral\Mediator\Airline("Airline B", ["FLIGHT201", "FLIGHT202"]);
+//$bookingSystem->registerAirline($airline1);
+//$bookingSystem->registerAirline($airline2);
+//$travelAgency = new \App\Behavioral\Mediator\TravelAgency("Travel Express", $bookingSystem);
+//$passengerName = "amer";
+//$flightCode = "FLIGHT203";
+//var_dump($travelAgency->bookFlightForPassenger($flightCode, $passengerName));
+//************** Observe ***********
+//$res = new \App\Behavioral\Observer\Restaurant();
+//$kitchen = new \App\Behavioral\Observer\Kitchen();
+//$res->attach($kitchen);
+//$res->setInfoOrder(10,['water','fish']);
+//var_dump($kitchen->getInfoOrder());
+//************** State *************
+//$orderContext = new \App\Behavioral\State\Order();
+//var_dump($orderContext->orderProceed());
+//var_dump($orderContext);
+//************* memento ***********
+//$textEditor = new \App\Behavioral\Memento\Editor();
+//$history = new \App\Behavioral\Memento\History($textEditor);
+//$textEditor->type("Hello, ");
+//$history->backup();
+//$textEditor->type("world!");
+//$history->undo();
+//var_dump($textEditor->getContent());
+//*************** builder ****************
+//$builder = new \App\Creational\Builder\ComputerSystemBuilder();
+//$computer = $builder->setCPU('core I5')
+//            ->setRAM('32GB')
+//            ->setStorage('SSD', '1TB')
+//            ->addPeripheral('Monitor')
+//            ->addPeripheral('Keyboard')
+//            ->addPeripheral('Mouse')
+//            ->build();
+//******************* prototype ***********
+//$task1 = new \App\Creational\Prototype\Task("Complete project",
+//    "Finish the important project milestones",
+//    new DateTime('2020-09-15'));
+//$task2 = clone $task1;
+//var_dump($task1->getInfo());
+//var_dump($task2->getInfo());
+//***************** data mapper ***************
+//$sql = new \App\Structural\DataMapper\SqlManager();
+//$user_mapper = new \App\Structural\DataMapper\UserMapper($sql);
+//$user = $user_mapper->findById(1);
+//var_dump($user->email);
+//**************** composite **************
+//$address = new \App\Structural\Composite\AddressDTO('qena',166);
+//$address2 = new \App\Structural\Composite\AddressDTO('egypt',8986565);
+//$owner = new \App\Structural\Composite\OrderOwnerDTO($address,'amer mohamed');
+//$owner2 = new \App\Structural\Composite\OrderOwnerDTO($address2,'moustafa saad');
+//$order = new \App\Structural\Composite\OrderDTO($owner,100,2);
+//$order2 = new \App\Structural\Composite\OrderDTO($owner2,200,3);
+//$bill = new \App\Structural\Composite\Bill();
+//$bill->addOrder($order);
+//$bill->addOrder($order2);
+//echo $bill;
+
